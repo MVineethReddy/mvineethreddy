@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta and Links -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vineeth Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Main Layout Container -->
+  <div class="container">
+    <!-- Header (for mobile only) -->
+    <header class="header">
+      <div class="avatar-wrapper">
+        <img src="assets/my-avatar.png" alt="Vineeth" class="avatar" />
+        <span class="online-dot"></span>
+      </div>
+      <div class="header-buttons">
+        <button class="header-btn menu-btn" id="menuToggleBtn"><ion-icon name="menu-outline"></ion-icon></button>
+      </div>
+    </header>
+
+    <!-- Left Sidebar: Profile, Contact, Skills -->
+    <aside class="sidebar">
+      <!-- Profile Section -->
+      <div class="profile">
+        <div class="avatar-wrapper">
+          <img src="assets/my-avatar.png" alt="Vineeth" class="avatar" />
+          <span class="online-dot"></span>
+        </div>
+        <h2>Vineeth Reddy<br>Maadugula</h2>
+        <span class="role">Business Intelligence Developer</span>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="contact">
+        <div class="contact-row">
+          <ion-icon name="mail-outline"></ion-icon>
+          <div class="label">Email:</div>
+          <div class="value">vineethreddy0196@gmail.com</div>
+        </div>
+        <div class="contact-row">
+          <ion-icon name="call-outline"></ion-icon>
+          <div class="label">Phone:</div>
+          <div class="value">913-548-5195</div>
+        </div>
+        <div class="contact-row">
+          <ion-icon name="home-outline"></ion-icon>
+          <div class="label">Location:</div>
+          <div class="value">Philadelphia, PA, USA</div>
+        </div>
+        <div class="contact-row">
+          <ion-icon name="calendar-outline"></ion-icon>
+          <div class="label">DOB:</div>
+          <div class="value">Sep 12, 1998</div>
+        </div>
+        <div class="contact-row">
+          <ion-icon name="briefcase-outline"></ion-icon>
+          <div class="label">Freelance:</div>
+          <div class="value">Available</div>
+        </div>
+      </div>
+
+      <!-- Skills Section -->
+      <div class="skills">
+        <h3>Major Skill</h3>
+        <div class="skill">Tableau <div class="bar" style="width:90%"></div></div>
+        <div class="skill">Power BI <div class="bar" style="width:80%"></div></div>
+        <div class="skill">Snowflake <div class="bar" style="width:90%"></div></div>
+        <div class="skill">Databricks <div class="bar" style="width:70%"></div></div>
+        <div class="skill">Web Development <div class="bar" style="width:80%"></div></div>
+
+        <h3>Extra Skill</h3>
+        <p>Bootstrap, Materialize, Sass, Stylus, Less, Gulp, Grunt, GIT Knowledge, Webpack</p>
+      </div>
+
+      <!-- CV Download Button -->
+      <a href="assets/Vineeth_Resume.pdf" download class="download-btn">Download My CV</a>
+    </aside>
+
+    <!-- Main Content: Hero, Services, Resume, Portfolio -->
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section" id="home">
+        <!-- Decorative Shapes -->
+        <div class="decor-shapes">
+          <span class="shape circle yellow"></span>
+          <span class="shape square green"></span>
+          <span class="shape triangle red"></span>
+          <span class="shape diamond blue"></span>
+        </div>
+        <div class="hero-container">
+          <div class="hero-text">
+            <h1>
+              I'm Vineeth Reddy<br>
+              <span class="highlight">Business Intelligence</span> Developer
+            </h1>
+            <p>
+              I turn raw data into meaningful dashboards and actionable insights that empower smarter decision-making.
+              Specialized in Business Intelligence, SQL, and data visualization — helping teams uncover trends, measure impact, and drive results.
+            </p>
+            <button class="hero-btn">Hire Me</button>
+          </div>
+          <div class="hero-image">
+            <img src="assets/Intro1.png" alt="Vineeth Reddy" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section class="services-section" id="about">
+        <h2>My Services</h2>
+        <p class="section-desc">What I can do for you — combining data, design, and development into results.</p>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <ion-icon name="analytics-outline" class="service-icon"></ion-icon>
+            <div class="service-title">Dashboard Development</div>
+            <div class="service-desc">Expert in crafting dashboards using Tableau Desktop & Server, including LODs, filters, and advanced charts.</div>
+          </div>
+
+          <div class="service-card">
+            <ion-icon name="code-slash-outline" class="service-icon"></ion-icon>
+            <div class="service-title">Web Development</div>
+            <div class="service-desc">Build responsive, scalable websites using modern frameworks.<br>From personal blogs to complex e-commerce platforms.</div>
+          </div>
+
+          <div class="service-card">
+            <ion-icon name="color-palette-outline" class="service-icon"></ion-icon>
+            <div class="service-title">UI/UX Design</div>
+            <div class="service-desc">Craft intuitive, user-centered designs for web and mobile.<br>Focus on wireframes, prototypes, and seamless experience.</div>
+          </div>
+
+          <div class="service-card">
+            <ion-icon name="camera-outline" class="service-icon"></ion-icon>
+            <div class="service-title">Photography</div>
+            <div class="service-desc">Deliver high-quality portraits and product shots.<br>Skilled in lighting, angles, and post-editing techniques.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education Section -->
+      <section class="resume-section" id="education">
+        <h2>Education</h2>
+        <p class="section-desc">My academic background focused on blending tech and analytics for smarter insights.</p>
+
+        <div class="resume-cards">
+          <div class="resume-card">
+            <div class="left">
+              <h3>University of Central Missouri</h3>
+              <span>Student</span>
+              <span class="badge">Aug 2022 - Aug 2023</span>
+            </div>
+            <div class="right">
+              <h4>Master’s in Computer Science</h4>
+              <p>Specialized in data engineering, distributed systems, and cloud technologies.
+              Completed capstone on real-time data pipelines using Apache Spark and Snowflake. Actively participated in coding clubs and data science workshops.</p>
+            </div>
+          </div>
+
+          <div class="resume-card">
+            <div class="left">
+              <h3>SR University</h3>
+              <span>Student</span>
+              <span class="badge">July 2015 - May 2019</span>
+            </div>
+            <div class="right">
+              <h4>Bachelor of Technology in Computer Science</h4>
+              <p>Built a strong foundation in algorithms, software development, and database systems.
+              Final year project focused on building a location-based smart attendance system. Involved in tech fests and inter-college hackathons.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section class="resume-section" id="experience">
+        <h2>Experience</h2>
+        <p class="section-desc">From dashboards to full-stack projects, here’s where I’ve made an impact.</p>
+
+        <div class="timeline">
+          <div class="timeline-item left">
+            <div class="content">
+              <h3>Software Engineer <span>- Walmart</span></h3>
+              <span class="badge">2022 – Present</span>
+              <p>Leading Tableau dashboard development and Snowflake data optimization for enterprise reporting. Collaborating closely with analysts to design actionable data models and self-service tools.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item right">
+            <div class="content">
+              <h3>Software Engineer <span>- Carelon Global Solution</span></h3>
+              <span class="badge">2020 – 2022</span>
+              <p>Worked on performance dashboards and SQL reporting for operations and sales teams. Improved report load times by 40% through efficient SQL tuning and schema refactoring.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item left">
+            <div class="content">
+              <h3>Tableau Developer <span>- T-Mobile</span></h3>
+              <span class="badge">2019 – 2020</span>
+              <p>Designed dynamic Tableau dashboards for revenue, cost, and ROI metrics, improving strategic forecasting accuracy.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio Section -->
+      <section class="portfolio-section" id="portfolio">
+        <h2>Portfolio</h2>
+        <p class="section-desc">
+          A showcase of dashboards, visual analytics, and data platforms that help transform raw numbers into business insights.
+          These projects highlight my experience with Tableau, Power BI, and Snowflake.
+        </p>
+
+        <div class="portfolio-filters">
+          <button class="filter-btn active" data-filter="all">All Categories</button>
+          <button class="filter-btn" data-filter="ui">UI Design</button>
+          <button class="filter-btn" data-filter="web">Web Templates</button>
+          <button class="filter-btn" data-filter="logo">Logo</button>
+          <button class="filter-btn" data-filter="branding">Branding</button>
+        </div>
+
+        <div class="portfolio-grid">
+          <div class="portfolio-item ui">
+            <img src="assets/portfolio1.png" alt="UI Design 1" />
+          </div>
+          <div class="portfolio-item web">
+            <img src="assets/portfolio1.png" alt="Web Template 1" />
+          </div>
+          <div class="portfolio-item logo">
+            <img src="assets/portfolio1.png" alt="Logo Design 1" />
+          </div>
+          <div class="portfolio-item branding">
+            <img src="assets/portfolio1.png" alt="Branding 1" />
+          </div>
+          <div class="portfolio-item ui">
+            <img src="assets/portfolio1.png" alt="UI Design 2" />
+          </div>
+          <div class="portfolio-item web">
+            <img src="assets/portfolio1.png" alt="Web Template 2" />
+          </div>
+          <div class="portfolio-item logo">
+            <img src="assets/portfolio1.png" alt="Logo Design 2" />
+          </div>
+          <div class="portfolio-item branding">
+            <img src="assets/portfolio1.png" alt="Branding 2" />
+          </div>
+        </div>
+      </section>
+      
+      <section id="contact">
+        <h2>Contact</h2>
+        <p class="section-desc">
+          Have a question or want to work together? Get in touch!
+        </p>        
+
+        <form id="contactForm" class="contact-form">
+          <div class="input-row">
+            <input type="text" name="name" placeholder="Full name" required />
+            <input type="email" name="email" placeholder="Email address" required />
+          </div>
+          <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+          <button type="submit" class="send-btn">
+            <ion-icon name="send-outline"></ion-icon> Send Message
+          </button>
+          <div id="formMessage" class="form-message"></div>
+        </form>
+      </section>
+      
+    </main>
+
+    <!-- Right Sidebar: Navigation -->
+    <div class="right-sidebar">
+      <div class="theme-toggle">
+	    <button id="themeButton">
+	      <ion-icon name="moon-outline"></ion-icon>
+	    </button>
+	  </div>
+      <ul class="nav-buttons">
+        <li><a href="#home"><ion-icon name="home-outline"></ion-icon></a></li>
+        <li><a href="#about"><ion-icon name="person-outline"></ion-icon></a></li>
+        <li><a href="#education"><ion-icon name="school-outline"></ion-icon></a></li>
+        <li><a href="#experience"><ion-icon name="briefcase-outline"></ion-icon></a></li>
+        <li><a href="#portfolio"><ion-icon name="create-outline"></ion-icon></a></li>
+        <li><a href="#contact"><ion-icon name="chatbubble-ellipses-outline"></ion-icon></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <!-- Ionicons for Icons -->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="script.js"></script>
+  <!-- Navigation Highlight Script -->
+  <script>
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".nav-buttons li a");
+
+    window.addEventListener("scroll", () => {
+      let currentSection = "";
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 150;
+        const sectionHeight = section.offsetHeight;
+        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+          currentSection = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach((link) => {
+        const li = link.parentElement;
+        li.classList.remove("active");
+        if (link.getAttribute("href") === `#${currentSection}`) {
+          li.classList.add("active");
+        }
+      });
+    });
+
+    // Handle click highlight immediately
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.forEach((l) => l.parentElement.classList.remove("active"));
+        link.parentElement.classList.add("active");
+      });
+    });
+  </script>
+  <script>
+    const menuBtn = document.querySelector('.menu-btn');
+    const sidebar = document.querySelector('.sidebar');
+    menuBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+    });
+  </script>
+    <script>
+    const toggleBtn = document.getElementById("menuToggleBtn");
+    const icon = toggleBtn.querySelector("ion-icon");
+    
+    toggleBtn.addEventListener("click", () => {
+      const isMenu = icon.getAttribute("name") === "menu-outline";
+      icon.setAttribute("name", isMenu ? "close-outline" : "menu-outline");
+    });
+  </script>
+  <script>
+    const themeButtons = [document.getElementById("themeButton"), document.getElementById("themeButtonMobile")];
+    const iconNames = { light: "moon-outline", dark: "sunny-outline" };
+  
+    function toggleTheme() {
+      const body = document.body;
+      const isDark = body.classList.toggle("dark-theme");
+      themeButtons.forEach(btn => {
+        const icon = btn.querySelector("ion-icon");
+        icon.setAttribute("name", isDark ? iconNames.dark : iconNames.light);
+      });
+    }
+  
+    themeButtons.forEach(btn => {
+      if (btn) btn.addEventListener("click", toggleTheme);
+    });
+  </script>
+  
+  <script>
+  const form = document.getElementById("contactForm");
+  const messageBox = document.getElementById("formMessage");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    try {
+      const res = await fetch("contact.php", {
+        method: "POST",
+        body: formData
+      });
+
+      const text = await res.text();
+      messageBox.textContent = text;
+      messageBox.classList.add("visible");
+      messageBox.style.color = text.includes("✅") ? "green" : "red";
+
+      form.reset();
+    } catch (err) {
+      messageBox.textContent = "❌ There was an error submitting the form.";
+      messageBox.classList.add("visible");
+      messageBox.style.color = "red";
+    }
+  });
+  </script>
+  
+</body>
+</html>
