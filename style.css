@@ -678,6 +678,21 @@ ion-icon {
   display: block;
 }
 
+.portfolio-item p {
+  margin-top: 10px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.portfolio-item a {
+  text-decoration: none;
+  color: var(--text-color); /* Keeps it consistent with your theme */
+  font-weight: 600;
+}
+
+.portfolio-item a:hover {
+  color: var(--accent-color); /* Optional: add hover effect */
+}
 /* ==========================================================================
    Contact Section
    ========================================================================== */

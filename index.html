@@ -67,17 +67,17 @@
       <div class="skills">
         <h3>Major Skill</h3>
         <div class="skill">Tableau <div class="bar" style="width:90%"></div></div>
-        <div class="skill">Power BI <div class="bar" style="width:80%"></div></div>
+        <div class="skill">Power BI <div class="bar" style="width:85%"></div></div>
         <div class="skill">Snowflake <div class="bar" style="width:90%"></div></div>
         <div class="skill">Databricks <div class="bar" style="width:70%"></div></div>
         <div class="skill">Web Development <div class="bar" style="width:80%"></div></div>
 
         <h3>Extra Skill</h3>
-        <p>Bootstrap, Materialize, Sass, Stylus, Less, Gulp, Grunt, GIT Knowledge, Webpack</p>
+        <p>AWS, GCP, Talend, Informatica, Alteryx, Python, GitHub, JavaScript</p>
       </div>
 
       <!-- CV Download Button -->
-      <a href="assets/Vineeth_Resume.pdf" download class="download-btn">Download My CV</a>
+      <!-- <a href="assets/Vineeth_Resume.pdf" download class="download-btn">Download My CV</a> -->
     </aside>
 
     <!-- Main Content: Hero, Services, Resume, Portfolio -->
@@ -101,7 +101,9 @@
               I turn raw data into meaningful dashboards and actionable insights that empower smarter decision-making.
               Specialized in Business Intelligence, SQL, and data visualization — helping teams uncover trends, measure impact, and drive results.
             </p>
-            <button class="hero-btn">Hire Me</button>
+            <!-- <button class="hero-btn">Hire Me</button> 
+            <a href="#contact" class="hero-btn">Hire Me</a>-->
+            <button class="hero-btn" id="hireMeBtn">Hire Me</button>
           </div>
           <div class="hero-image">
             <img src="assets/Intro1.png" alt="Vineeth Reddy" />
@@ -217,16 +219,21 @@
 
         <div class="portfolio-filters">
           <button class="filter-btn active" data-filter="all">All Categories</button>
-          <button class="filter-btn" data-filter="ui">UI Design</button>
-          <button class="filter-btn" data-filter="web">Web Templates</button>
-          <button class="filter-btn" data-filter="logo">Logo</button>
-          <button class="filter-btn" data-filter="branding">Branding</button>
+          <button class="filter-btn" data-filter="dbs">Dashboards</button>
+          <button class="filter-btn" data-filter="web">Web Development</button>
         </div>
 
+	    
         <div class="portfolio-grid">
-          <div class="portfolio-item ui">
-            <img src="assets/portfolio1.png" alt="UI Design 1" />
+        
+          <div class="portfolio-item dbs">
+            <a href="https://public.tableau.com/views/AgencyMarket_17490474971310/KPIDashboard" target="_blank">
+              	<img src="assets/portfolio1.png" alt="UI Design 1" />
+            	<p>Agency Market Dashboard</p>
+            </a>
           </div>
+          
+          <!-- 
           <div class="portfolio-item web">
             <img src="assets/portfolio1.png" alt="Web Template 1" />
           </div>
@@ -247,7 +254,7 @@
           </div>
           <div class="portfolio-item branding">
             <img src="assets/portfolio1.png" alt="Branding 2" />
-          </div>
+          </div>  -->
         </div>
       </section>
       
@@ -280,12 +287,12 @@
 	    </button>
 	  </div>
       <ul class="nav-buttons">
-        <li><a href="#home"><ion-icon name="home-outline"></ion-icon></a></li>
-        <li><a href="#about"><ion-icon name="person-outline"></ion-icon></a></li>
-        <li><a href="#education"><ion-icon name="school-outline"></ion-icon></a></li>
-        <li><a href="#experience"><ion-icon name="briefcase-outline"></ion-icon></a></li>
-        <li><a href="#portfolio"><ion-icon name="create-outline"></ion-icon></a></li>
-        <li><a href="#contact"><ion-icon name="chatbubble-ellipses-outline"></ion-icon></a></li>
+		<li><a href="#" data-target="home"><ion-icon name="home-outline"></ion-icon></a></li>
+		<li><a href="#" data-target="about"><ion-icon name="person-outline"></ion-icon></a></li>
+		<li><a href="#" data-target="education"><ion-icon name="school-outline"></ion-icon></a></li>
+		<li><a href="#" data-target="experience"><ion-icon name="briefcase-outline"></ion-icon></a></li>
+		<li><a href="#" data-target="portfolio"><ion-icon name="create-outline"></ion-icon></a></li>
+		<li><a href="#" data-target="contact"><ion-icon name="chatbubble-ellipses-outline"></ion-icon></a></li>
       </ul>
     </div>
   </div>
@@ -389,6 +396,72 @@
       messageBox.style.color = "red";
     }
   });
+  </script>
+  <script>
+    document.getElementById("hireMeBtn").addEventListener("click", function () {
+      const contactSection = document.getElementById("contact");
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    });
+  </script>
+  <script>
+    document.querySelectorAll('.nav-buttons a').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault(); // Prevent default anchor behavior
+        const targetId = this.getAttribute('data-target');
+        const targetEl = document.getElementById(targetId);
+        if (targetEl) {
+          targetEl.scrollIntoView({ behavior: 'smooth' });
+        }
+  
+        // Highlight active link
+        document.querySelectorAll('.nav-buttons li').forEach(li => li.classList.remove('active'));
+        this.parentElement.classList.add('active');
+      });
+    });
+  </script>
+  <script>
+    const sections = document.querySelectorAll("section[id]");
+    const navItems = document.querySelectorAll(".nav-buttons li");
+    const navLinks = document.querySelectorAll(".nav-buttons li a");
+  
+    function activateCurrentSection() {
+      let index = sections.length;
+  
+      while (--index >= 0) {
+        const rect = sections[index].getBoundingClientRect();
+        if (rect.top <= 150) {
+          const currentId = sections[index].getAttribute("id");
+  
+          navItems.forEach((item) => item.classList.remove("active"));
+  
+          navLinks.forEach((link) => {
+            if (link.getAttribute("data-target") === currentId) {
+              link.parentElement.classList.add("active");
+            }
+          });
+  
+          break; // Exit loop after first match
+        }
+      }
+    }
+  
+    // Scroll detection
+    window.addEventListener("scroll", activateCurrentSection);
+  
+    // Click scrolling
+    navLinks.forEach((link) => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute("data-target");
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: "smooth" });
+        }
+  
+        navItems.forEach((item) => item.classList.remove("active"));
+        this.parentElement.classList.add("active");
+      });
+    });
   </script>
   
 </body>
