@@ -129,7 +129,7 @@ h1, h2, h3, h4, .section-desc {
 .contact {
   display: grid;
   grid-template-columns: 24px 100px 1fr;
-  row-gap: 16px;
+  row-gap: 18px;
   font-size: 14px;
 }
 
